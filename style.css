@@ -16,16 +16,15 @@ header {
     display: flex;
     justify-content: space-between;
     background-color: #d6c9f7;
-    padding: 15px;
+    padding: 0 15px;
 }
 
 header .image-section h1 {
     font-size: normal;
     font-weight: normal;
     font-size: 1rem;
+    margin: 15px 0;
     padding: 5px 0;
-    margin-top: 5px;
-    margin-left: 10px;
 }
 
 header nav {
@@ -34,11 +33,12 @@ header nav {
 
 header nav ul{
     list-style-type: none;
+    margin: 15px 0;
 }
 
 header nav ul li {
     display: inline-block;
-    margin: 0 20px;
+    margin: 0 10px; 
 }
 
 header nav ul li a {
@@ -49,17 +49,15 @@ header nav ul li a {
 
 header nav ul li:nth-child(4){
     border: 1px solid #afa2c9;
-    padding: 5px 20px;
-    margin-top: 5px;
     border-radius: 5px;
+    padding: 5px 10px;
 }
 
 header nav ul li:nth-child(5) {
     background-color: #6736c6;
-    padding: 5px 20px;
     border: 1px solid #afa2c9;
-    margin-top: 10px;
     border-radius: 5px;
+    padding: 5px 10px;
 }
 
 #white {
@@ -82,8 +80,13 @@ main {
     gap: 20px;
 }
 
-main.left {
+main .left {
     grid-area: 1 / 1 / 2 / 2;
+}
+
+main .left img {
+    width: 100%;
+    height: 100%;
 }
 
 main .right {
@@ -134,4 +137,138 @@ main .right p {
     width: 49%;
     border-radius: 5px;
 }
-/*#6736c6*/
+
+
+/* add responsiveness for smaller screens */
+
+@media only screen and (max-width: 780px) {    
+    header nav ul li {
+        display: inline-block;
+        margin: 0 10px;
+    }
+
+    @media only screen and (max-width: 450px){
+        header {
+            padding: 0 10px;
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-rows: auto auto;
+            justify-content: center;
+        }
+        
+        header .image-section h1 {
+            font-weight: 500;
+            font-size: 1rem;
+            padding: 0;
+            margin: 5px 0 0 0;
+            grid-area: 1 / 1 / 2 / 2;
+        }
+        
+        header nav {
+            margin: 0;
+            padding: 0;
+            grid-area: 2 / 1 / 3 / 2;
+            display: grid;
+            justify-content: center;
+        }
+        
+        header nav ul{
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            margin-bottom: 2px;
+        }
+        
+        header nav ul li {
+            display: inline-block;
+            padding: 0;
+            margin: 0 10px 0 0;
+        }
+        
+        header nav ul li a {
+            color: black;
+            text-decoration: none;
+            font-size: 0.7rem;
+        }
+
+        header nav ul li:nth-child(4){
+            display: none;
+        }
+        
+        header nav ul li:nth-child(5) {
+            display: none;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            margin-top:0
+        }
+
+        main .left {
+            display: none;
+        }
+        
+        main .right {
+            grid-area: 1 / 1 / 2 / 2;
+            width: 70%;
+            padding-top: 0px;
+            position: relative;
+            top: 10px;
+            margin-left: 10px;
+        }
+        
+        main .right h2 {
+            font-weight:900;
+            font-size: 4rem;
+            margin-bottom: 10px;
+            line-height: 1.05;
+        }
+        
+        main .right h2 span {
+            color: #6736c6;
+        }
+        
+        main .right p {
+            font-size: 0.9rem;
+            color: rgb(61, 61, 61);
+        }
+        
+        .right .bottom-side a:nth-child(1) {
+            width: 49%;
+            display: inline-block;
+            background-color: #6736c6;
+            padding: 5px 10px;
+            border: 1px solid #afa2c9;
+            margin-top: 10px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        
+        .right .bottom-side {
+            text-align: center;
+        }
+        
+        .right .bottom-side a:nth-child(2) {
+            display: inline-block;
+            border: 1px solid #afa2c9;
+            padding: 5px 10px;
+            margin-top: 5px;
+            text-decoration: none;
+            width: 49%;
+            border-radius: 5px;
+        }
+        
+    }
+
+    @media only screen and (max-width: 380px) {
+        main .right h2 {
+            font-weight:900;
+            font-size: 3rem;
+            margin-bottom: 10px;
+            line-height: 1;
+        }
+    }
+    
+}
