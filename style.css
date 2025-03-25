@@ -1,0 +1,137 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik+Glitch+Pop&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f6f6f6;
+    font-family: "Montserrat", sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #d6c9f7;
+    padding: 15px;
+}
+
+header .image-section h1 {
+    font-size: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    padding: 5px 0;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+header nav {
+    margin-right: 10px;
+}
+
+header nav ul{
+    list-style-type: none;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+header nav ul li:nth-child(4){
+    border: 1px solid #afa2c9;
+    padding: 5px 20px;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+header nav ul li:nth-child(5) {
+    background-color: #6736c6;
+    padding: 5px 20px;
+    border: 1px solid #afa2c9;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+#white {
+    color: #fff;
+}
+
+header nav ul li:hover {
+    text-decoration: underline;
+}
+
+header nav ul li:nth-child(4):hover, header nav ul li:nth-child(5):hover {
+    text-decoration: none;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+main.left {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+main .right {
+    grid-area: 1 / 2 / 2 / 3;
+    width: 70%;
+    padding-top: 20px;
+    position: relative;
+    top: 10%;
+}
+
+main .right h2 {
+    font-weight:900;
+    font-size: 4rem;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+main .right h2 span {
+    color: #6736c6;
+}
+
+main .right p {
+    font-size: 0.9rem;
+    color: rgb(61, 61, 61);
+}
+
+.right .bottom-side a:nth-child(1) {
+    width: 49%;
+    display: inline-block;
+    background-color: #6736c6;
+    padding: 5px 10px;
+    border: 1px solid #afa2c9;
+    margin-top: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.right .bottom-side {
+    text-align: center;
+}
+
+.right .bottom-side a:nth-child(2) {
+    display: inline-block;
+    border: 1px solid #afa2c9;
+    padding: 5px 10px;
+    margin-top: 5px;
+    text-decoration: none;
+    width: 49%;
+    border-radius: 5px;
+}
+/*#6736c6*/
